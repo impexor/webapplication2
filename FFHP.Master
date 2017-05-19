@@ -1,0 +1,275 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FFHP.master.cs" Inherits="WebApplication2.FFHP" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc2" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Stylesheet1.css" type="text/css" rel="Stylesheet" />
+    <link href="stylesheet.css" type="text/css" rel="Stylesheet" />
+</head>
+<style type="text/css">
+    /* Menu container */
+    .menu
+    {
+        width: 300px;
+        height: 175px;
+        border: solid #FF9900 1px;
+        padding: 10px 5px 10px 5px;
+        margin: 12px 12px 12px 50px;
+    }
+    /* Menu styles */
+    .menu ul
+    {
+        margin: 0px;
+        padding: 0px;
+        text-decoration: none;
+    }
+    .menu li
+    {
+        margin: 0px 0px 0px 5px;
+        padding: 0px;
+        list-style-type: none;
+        text-align: left;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 13px;
+        font-weight: normal;
+    }
+    /* Submenu styles */
+    .menu ul ul
+    {
+        background-color: #F6F6F6;
+    }
+    .menu li li
+    {
+        margin: 0px 0px 0px 16px;
+    }
+    /* Symbol styles */
+    .menu .symbol-item, .menu .symbol-open, .menu .symbol-close
+    {
+        float: left;
+        width: 16px;
+        height: 1em;
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+    .menu .symbol-item
+    {
+        background-image: url(icons/page.png);
+    }
+    .menu .symbol-close
+    {
+        background-image: url(icons/plus.png);
+    }
+    .menu .symbol-open
+    {
+        background-image: url(icons/minus.png);
+    }
+    .menu .symbol-item.last
+    {
+    }
+    .menu .symbol-close.last
+    {
+    }
+    .menu .symbol-open.last
+    {
+    }
+    /* Menu line styles */
+    .menu li.item
+    {
+        font-weight: normal;
+    }
+    .menu li.close
+    {
+        font-weight: normal;
+    }
+    .menu li.open
+    {
+        font-weight: bold;
+    }
+    .menu li.item.last
+    {
+    }
+    .menu li.close.last
+    {
+    }
+    .menu li.open.last
+    {
+    }
+    a.go:link, a.go:visited, a.go:active
+    {
+        display: block;
+        height: 26px;
+        width: 100px;
+        background-color: #FFFFFF;
+        color: #333333;
+        font-family: Arial,Helvetica,sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: right;
+        text-decoration: none;
+        line-height: 26px;
+        padding-right: 30px;
+        background-image: url(go.gif);
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    a.go:hover
+    {
+        text-decoration: none;
+        color: #488400;
+    }
+    #example3
+    {
+        width: 40%;
+        background-color: #F9F9F9;
+        padding: 0px;
+        margin-left: 24px;
+    }
+    #example3 li
+    {
+        list-style: none;
+        margin: 1px 0px;
+    }
+    #example3 li a
+    {
+        display: block;
+        height: 16px;
+        padding: 0px 4px;
+        background-color: #EEEEFF;
+    }
+    #example3 li ul
+    {
+        margin: 0px;
+        padding: 0px;
+    }
+    #example3 li ul li a
+    {
+        background-color: #F9F9F9;
+        border-bottom: solid #ECECEC 1px;
+        padding-left: 20px;
+    }
+</style>
+<!-- How To Create a Website Multi Menu CSS Start -->
+<style type="text/css">
+    .createawebsitediv ul
+    {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        width: 160px; /* Width of Menu Items */
+        border-top: 1px solid #212463;
+        border-bottom: 1px solid #212463;
+        border-right: 1px solid #212463;
+    }
+    .createawebsitediv ul li
+    {
+        position: relative;
+    }
+    /*Sub level menu items */
+    .createawebsitediv ul li ul
+    {
+        position: absolute;
+        width: 180px; /*sub menu width*/
+        top: 0;
+        visibility: hidden;
+    }
+    /* Sub level menu links styleborder: 1px solid #C00000;   
+ */
+    .createawebsitediv ul li a
+    {
+        display: block;
+        overflow: auto; /*force hasLayout in IE7 */
+        color: #CEE7F7;
+        text-decoration: none;
+        background: #212463;
+        padding: 10px 10px;
+        border-bottom: 0;
+        font-size: 14px;
+        font-weight: bold;
+        vertical-align: bottom;
+    }
+    .createawebsitediv ul li a:visited
+    {
+        /*color: #CEE7F7;*/
+        background: #212463;
+    }
+    .createawebsitediv ul li a:hover
+    {
+        background-color: #CEE7F7;
+    }
+    .createawebsitediv ul li a:hover
+    {
+        color: #212463;
+    }
+    .createawebsitediv .subfolderstyle
+    {
+        background: #212463;
+    }
+    /* Holly Hack for IE \*/
+    * html .createawebsitediv ul li
+    {
+        float: left;
+        height: 1%;
+    }
+    * html .createawebsitediv ul li a
+    {
+        height: 1%;
+    }
+    /* End */</style>
+
+<script type="text/javascript" src="Images/multi-level-menu-html.js"></script>
+
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <table width="100%">
+            <tr>
+                <td colspan="2" class="heading" align="center" valign="middle" height="100px">
+                    FFHP Support Tool
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="20%" id="tdmenu" runat="server">
+                    <div class="createawebsitediv">
+                        <ul id="createawebsite1">
+                            <%--<li><a id="M2" runat="server" href="WebForm1.aspx">Packet List</a></li>--%>
+                            <%--<li><a id="M0" runat="server" href="Orderentry.aspx">Order Entry</a></li>--%>
+                            <li><a id="M1" runat="server" href="ffhpnew.aspx">Delivery Info Sheet</a></li>
+                            <%--<li><a id="M2" runat="server" href="Orders.aspx">Order Info Sheet</a></li>
+                            <li><a id="M3" runat="server" href="YOYOwithNames.aspx">YOYO With Names</a></li>hiding at march 31--%><%--// for hiding refered by saravanan--%>
+                            <li><a id="M4" runat="server" href="alacartewithNames.aspx">Alacarte</a></li>
+                            <%--<li><a id="M4" runat="server" href="OtherPack.aspx">Other than YOYO</a></li>--%>
+                            <%--<li><a id="M5" runat="server" href="TotalWeight.aspx">Total Weight</a></li>hiding at march 31--%>
+                            <li><a id="A6" runat="server" href="TotalWeightlprdata.aspx">Total Weight New</a></li>
+                            <%--<li><a id="M7" runat="server" href="TotalPacketsSummary1.aspx">Packets Summary1</a></li>
+                            <li><a id="A1" runat="server" href="TotalPacketsSummary.aspx">Packets Summary2</a></li>--%>
+                            <%--<li><a id="M6" runat="server" href="TotalPackets.aspx">Packets Details</a></li> hiding at march 31--%>
+                            <li><a id="A7" runat="server" href="TotalPacketslprdata.aspx">Packets Details New</a></li>
+                            <li><a id="A2" runat="server" href="sms.aspx">Sms Process</a></li>
+                            <li><a id="A3" runat="server" href="AlertMail.aspx">Customer List</a></li>
+                            <li><a id="A1" runat="server" href="SendSmsTemplate.aspx">SMS to Order List</a></li>
+                            <li><a id="A4" runat="server" href="SendSmsCustomerTemplate.aspx">SMS to Customer List</a></li>
+                            <%--<li><a id="A2" runat="server" href="OrderNumber.aspx">Order Numbers</a></li>--%>
+                            <li><a id="A5" runat="server" href="RouteOrder.aspx">Route Order</a></li>
+                            <li><a id="A8" runat="server" href="Delivery_Status.aspx">Delivery Data</a></li>
+                            <li><a id="M8" runat="server" href="Logout.aspx">Logout</a></li>
+                        </ul>
+                    </div>
+                </td>
+                <td width="80%" valign="top">
+                    
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

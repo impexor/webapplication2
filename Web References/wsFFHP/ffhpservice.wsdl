@@ -1,0 +1,3753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Getallproducts">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetallproductsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetallproductsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getalacartewithnames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ordernumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetalacartewithnamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetalacartewithnamesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getalacartewithnamesxml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ordernumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetalacartewithnamesxmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetalacartewithnamesxmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalculateWeight">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCalculateWeightResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalculateWeightResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalculateWeightNew">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCalculateWeightNewResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalculateWeightNewResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderNumbers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetOrderNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderNumbersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCODorderNumbers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCODorderNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCODorderNumbersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Getsentsmslog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetsentsmslogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetsentsmslogResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDetailsbyorderid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ordernumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codordernumbers" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDetailsbyorderidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderDetailsbyorderidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FromDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="ToDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOrderDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOrderDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sendsms_mail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="smstype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sendsms_mailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sendsms_mailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceOrderupdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmOrderNumbers" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CODOrderNumbers" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceOrderupdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceOrderupdateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MailSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Content" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MailSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MailSendResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getcurrentroutelist">
+        <s:complexType />
+      </s:element>
+      <s:element name="getcurrentroutelistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getcurrentroutelistResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRoute_Ordernumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="route_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRoute_OrdernumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRoute_OrdernumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllRoute_Ordernumber">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllRoute_OrdernumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllRoute_OrdernumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setRoute_Latitude_Longitude">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="route_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setRoute_Latitude_LongitudeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="setRoute_Latitude_LongitudeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_Latitude_Longitude_History">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="route_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="updateddate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_Latitude_Longitude_HistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_Latitude_Longitude_HistoryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRoute_Delivery_Details">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="route_id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getRoute_Delivery_DetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getRoute_Delivery_DetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Delivery_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="route_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordernumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="order_status" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="driver_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="driver_phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deliveryboy_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="deliveryboy_phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Delivery_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insert_Delivery_DetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Delivery_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="route_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ordernumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="collection_amount" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="reduction" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="balance" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="delivery_starttime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="delivery_closetime" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="kilometer" type="s:float" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="start_close_time" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="latitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="longitude" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Delivery_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Delivery_DetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Delivery_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromdate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="todate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Delivery_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Delivery_DetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Mobile_Orders">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_Mobile_OrdersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Mobile_OrdersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Product_Weight_Price">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_Product_Weight_PriceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Product_Weight_PriceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProduct_Weight_Price_for_Before_After_Sale">
+        <s:complexType />
+      </s:element>
+      <s:element name="getProduct_Weight_Price_for_Before_After_SaleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getProduct_Weight_Price_for_Before_After_SaleResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchase">
+        <s:complexType />
+      </s:element>
+      <s:element name="getPurchaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPurchaseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchase_datewise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchase_datewiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPurchase_datewiseResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchase_Datewise_pid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="from" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pid" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPurchase_Datewise_pidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPurchase_Datewise_pidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Tray_Loading">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Tray_LoadingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Tray_LoadingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Tray_Loading">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Tray_LoadingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insert_Tray_LoadingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Tray_Loading">
+        <s:complexType />
+      </s:element>
+      <s:element name="Get_Tray_LoadingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Tray_LoadingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Delivery_Status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dtdeliverystatus">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Delivery_StatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insert_Delivery_StatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Delivery_Status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Delivery_StatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Update_Delivery_StatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Delivery_Status">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromdate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="todate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Delivery_StatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Delivery_StatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Delivery_Status_Ordernumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ordernumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Delivery_Status_OrdernumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Delivery_Status_OrdernumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_Start_Route">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Routename" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Set_Start_RouteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Set_Start_RouteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ffhp_scan_orders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromdate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="todate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ffhp_scan_ordersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ffhp_scan_ordersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ffhp_before_after_sale">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromdate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="todate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="get_ffhp_before_after_saleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="get_ffhp_before_after_saleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLPRdata">
+        <s:complexType />
+      </s:element>
+      <s:element name="getLPRdataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getLPRdataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Payment_Collection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Payment_CollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insert_Payment_CollectionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Payment_Collection_deliveryboy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="jsonstring" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Insert_Payment_Collection_deliveryboyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Insert_Payment_Collection_deliveryboyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Payment_Collection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fromdate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="todate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Payment_CollectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Payment_CollectionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_Stock_Sale_Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_Stock_Sale_DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upload_Stock_Sale_DataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_ffhporders">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Upload_ffhpordersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upload_ffhpordersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DeliveryBoy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_DeliveryBoyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_DeliveryBoyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_User_Access">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="designation" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_User_AccessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_User_AccessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllDeliveryboy_Ordernumber">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllDeliveryboy_OrdernumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllDeliveryboy_OrdernumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetallproductsSoapIn">
+    <wsdl:part name="parameters" element="tns:Getallproducts" />
+  </wsdl:message>
+  <wsdl:message name="GetallproductsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetallproductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesSoapIn">
+    <wsdl:part name="parameters" element="tns:Getalacartewithnames" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetalacartewithnamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesxmlSoapIn">
+    <wsdl:part name="parameters" element="tns:Getalacartewithnamesxml" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesxmlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetalacartewithnamesxmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalculateWeight" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalculateWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightNewSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalculateWeightNew" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightNewSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalculateWeightNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderNumbers" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCODorderNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCODorderNumbers" />
+  </wsdl:message>
+  <wsdl:message name="GetCODorderNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCODorderNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetsentsmslogSoapIn">
+    <wsdl:part name="parameters" element="tns:Getsentsmslog" />
+  </wsdl:message>
+  <wsdl:message name="GetsentsmslogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetsentsmslogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsbyorderidSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailsbyorderid" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsbyorderidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailsbyorderidResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Sendsms_mailSoapIn">
+    <wsdl:part name="parameters" element="tns:Sendsms_mail" />
+  </wsdl:message>
+  <wsdl:message name="Sendsms_mailSoapOut">
+    <wsdl:part name="parameters" element="tns:Sendsms_mailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceOrderupdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceOrderupdate" />
+  </wsdl:message>
+  <wsdl:message name="ServiceOrderupdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceOrderupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="MailSendSoapIn">
+    <wsdl:part name="parameters" element="tns:MailSend" />
+  </wsdl:message>
+  <wsdl:message name="MailSendSoapOut">
+    <wsdl:part name="parameters" element="tns:MailSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="getcurrentroutelistSoapIn">
+    <wsdl:part name="parameters" element="tns:getcurrentroutelist" />
+  </wsdl:message>
+  <wsdl:message name="getcurrentroutelistSoapOut">
+    <wsdl:part name="parameters" element="tns:getcurrentroutelistResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_OrdernumberSoapIn">
+    <wsdl:part name="parameters" element="tns:getRoute_Ordernumber" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_OrdernumberSoapOut">
+    <wsdl:part name="parameters" element="tns:getRoute_OrdernumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllRoute_OrdernumberSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllRoute_Ordernumber" />
+  </wsdl:message>
+  <wsdl:message name="getAllRoute_OrdernumberSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllRoute_OrdernumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="setRoute_Latitude_LongitudeSoapIn">
+    <wsdl:part name="parameters" element="tns:setRoute_Latitude_Longitude" />
+  </wsdl:message>
+  <wsdl:message name="setRoute_Latitude_LongitudeSoapOut">
+    <wsdl:part name="parameters" element="tns:setRoute_Latitude_LongitudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_Latitude_Longitude_HistorySoapIn">
+    <wsdl:part name="parameters" element="tns:get_Latitude_Longitude_History" />
+  </wsdl:message>
+  <wsdl:message name="get_Latitude_Longitude_HistorySoapOut">
+    <wsdl:part name="parameters" element="tns:get_Latitude_Longitude_HistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_Delivery_DetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:getRoute_Delivery_Details" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_Delivery_DetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:getRoute_Delivery_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Delivery_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Delivery_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Delivery_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_Delivery_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Delivery_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Delivery_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Mobile_OrdersSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Mobile_Orders" />
+  </wsdl:message>
+  <wsdl:message name="Get_Mobile_OrdersSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Mobile_OrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Product_Weight_PriceSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Product_Weight_Price" />
+  </wsdl:message>
+  <wsdl:message name="Get_Product_Weight_PriceSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Product_Weight_PriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProduct_Weight_Price_for_Before_After_SaleSoapIn">
+    <wsdl:part name="parameters" element="tns:getProduct_Weight_Price_for_Before_After_Sale" />
+  </wsdl:message>
+  <wsdl:message name="getProduct_Weight_Price_for_Before_After_SaleSoapOut">
+    <wsdl:part name="parameters" element="tns:getProduct_Weight_Price_for_Before_After_SaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseSoapIn">
+    <wsdl:part name="parameters" element="tns:getPurchase" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseSoapOut">
+    <wsdl:part name="parameters" element="tns:getPurchaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_datewiseSoapIn">
+    <wsdl:part name="parameters" element="tns:getPurchase_datewise" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_datewiseSoapOut">
+    <wsdl:part name="parameters" element="tns:getPurchase_datewiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_Datewise_pidSoapIn">
+    <wsdl:part name="parameters" element="tns:getPurchase_Datewise_pid" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_Datewise_pidSoapOut">
+    <wsdl:part name="parameters" element="tns:getPurchase_Datewise_pidResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_Tray_LoadingSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Tray_Loading" />
+  </wsdl:message>
+  <wsdl:message name="Update_Tray_LoadingSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_Tray_LoadingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Tray_LoadingSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Tray_Loading" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Tray_LoadingSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Tray_LoadingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Tray_LoadingSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Tray_Loading" />
+  </wsdl:message>
+  <wsdl:message name="Get_Tray_LoadingSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Tray_LoadingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_StatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Delivery_Status" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_StatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Delivery_StatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_StatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Delivery_Status" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_StatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_Delivery_StatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_StatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Delivery_Status" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_StatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Delivery_StatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_Status_OrdernumberSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Delivery_Status_Ordernumber" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_Status_OrdernumberSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Delivery_Status_OrdernumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="Set_Start_RouteSoapIn">
+    <wsdl:part name="parameters" element="tns:Set_Start_Route" />
+  </wsdl:message>
+  <wsdl:message name="Set_Start_RouteSoapOut">
+    <wsdl:part name="parameters" element="tns:Set_Start_RouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_scan_ordersSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ffhp_scan_orders" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_scan_ordersSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ffhp_scan_ordersResponse" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_before_after_saleSoapIn">
+    <wsdl:part name="parameters" element="tns:get_ffhp_before_after_sale" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_before_after_saleSoapOut">
+    <wsdl:part name="parameters" element="tns:get_ffhp_before_after_saleResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLPRdataSoapIn">
+    <wsdl:part name="parameters" element="tns:getLPRdata" />
+  </wsdl:message>
+  <wsdl:message name="getLPRdataSoapOut">
+    <wsdl:part name="parameters" element="tns:getLPRdataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_CollectionSoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Payment_Collection" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_CollectionSoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Payment_CollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_Collection_deliveryboySoapIn">
+    <wsdl:part name="parameters" element="tns:Insert_Payment_Collection_deliveryboy" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_Collection_deliveryboySoapOut">
+    <wsdl:part name="parameters" element="tns:Insert_Payment_Collection_deliveryboyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Payment_CollectionSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Payment_Collection" />
+  </wsdl:message>
+  <wsdl:message name="Get_Payment_CollectionSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Payment_CollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_Stock_Sale_DataSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_Stock_Sale_Data" />
+  </wsdl:message>
+  <wsdl:message name="Upload_Stock_Sale_DataSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_Stock_Sale_DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="Upload_ffhpordersSoapIn">
+    <wsdl:part name="parameters" element="tns:Upload_ffhporders" />
+  </wsdl:message>
+  <wsdl:message name="Upload_ffhpordersSoapOut">
+    <wsdl:part name="parameters" element="tns:Upload_ffhpordersResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliveryBoySoapIn">
+    <wsdl:part name="parameters" element="tns:Get_DeliveryBoy" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliveryBoySoapOut">
+    <wsdl:part name="parameters" element="tns:Get_DeliveryBoyResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_User_AccessSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_User_Access" />
+  </wsdl:message>
+  <wsdl:message name="Get_User_AccessSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_User_AccessResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllDeliveryboy_OrdernumberSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllDeliveryboy_Ordernumber" />
+  </wsdl:message>
+  <wsdl:message name="getAllDeliveryboy_OrdernumberSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllDeliveryboy_OrdernumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetallproductsHttpGetIn" />
+  <wsdl:message name="GetallproductsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesHttpGetIn">
+    <wsdl:part name="ordernumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesxmlHttpGetIn">
+    <wsdl:part name="ordernumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesxmlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightHttpGetIn" />
+  <wsdl:message name="GetCalculateWeightHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightNewHttpGetIn" />
+  <wsdl:message name="GetCalculateWeightNewHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderNumbersHttpGetIn" />
+  <wsdl:message name="GetOrderNumbersHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCODorderNumbersHttpGetIn" />
+  <wsdl:message name="GetCODorderNumbersHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetsentsmslogHttpGetIn">
+    <wsdl:part name="FromDate" type="s:string" />
+    <wsdl:part name="ToDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetsentsmslogHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsbyorderidHttpGetIn">
+    <wsdl:part name="ordernumbers" type="s:string" />
+    <wsdl:part name="codordernumbers" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsbyorderidHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsHttpGetIn">
+    <wsdl:part name="FromDate" type="s:string" />
+    <wsdl:part name="ToDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Sendsms_mailHttpGetIn">
+    <wsdl:part name="OrderNumber" type="s:string" />
+    <wsdl:part name="smstype" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Sendsms_mailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceOrderupdateHttpGetIn">
+    <wsdl:part name="ConfirmOrderNumbers" type="s:string" />
+    <wsdl:part name="CODOrderNumbers" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceOrderupdateHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendHttpGetIn">
+    <wsdl:part name="OrderNumber" type="s:string" />
+    <wsdl:part name="Content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getcurrentroutelistHttpGetIn" />
+  <wsdl:message name="getcurrentroutelistHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_OrdernumberHttpGetIn">
+    <wsdl:part name="route_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_OrdernumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllRoute_OrdernumberHttpGetIn" />
+  <wsdl:message name="getAllRoute_OrdernumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="setRoute_Latitude_LongitudeHttpGetIn">
+    <wsdl:part name="route_id" type="s:string" />
+    <wsdl:part name="latitude" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="setRoute_Latitude_LongitudeHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="get_Latitude_Longitude_HistoryHttpGetIn">
+    <wsdl:part name="route_id" type="s:string" />
+    <wsdl:part name="updateddate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_Latitude_Longitude_HistoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_Delivery_DetailsHttpGetIn">
+    <wsdl:part name="route_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_Delivery_DetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_DetailHttpGetIn">
+    <wsdl:part name="route_name" type="s:string" />
+    <wsdl:part name="ordernumber" type="s:string" />
+    <wsdl:part name="order_status" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="driver_name" type="s:string" />
+    <wsdl:part name="driver_phone" type="s:string" />
+    <wsdl:part name="deliveryboy_name" type="s:string" />
+    <wsdl:part name="deliveryboy_phone" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_DetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_DetailHttpGetIn">
+    <wsdl:part name="route_name" type="s:string" />
+    <wsdl:part name="ordernumber" type="s:string" />
+    <wsdl:part name="collection_amount" type="s:string" />
+    <wsdl:part name="reduction" type="s:string" />
+    <wsdl:part name="balance" type="s:string" />
+    <wsdl:part name="delivery_starttime" type="s:string" />
+    <wsdl:part name="delivery_closetime" type="s:string" />
+    <wsdl:part name="kilometer" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="start_close_time" type="s:string" />
+    <wsdl:part name="latitude" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_DetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_DetailHttpGetIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_DetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Mobile_OrdersHttpGetIn" />
+  <wsdl:message name="Get_Mobile_OrdersHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Product_Weight_PriceHttpGetIn" />
+  <wsdl:message name="Get_Product_Weight_PriceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getProduct_Weight_Price_for_Before_After_SaleHttpGetIn" />
+  <wsdl:message name="getProduct_Weight_Price_for_Before_After_SaleHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseHttpGetIn" />
+  <wsdl:message name="getPurchaseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_datewiseHttpGetIn">
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_datewiseHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_Datewise_pidHttpGetIn">
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="pid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_Datewise_pidHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Tray_LoadingHttpGetIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Tray_LoadingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Tray_LoadingHttpGetIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Tray_LoadingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Tray_LoadingHttpGetIn" />
+  <wsdl:message name="Get_Tray_LoadingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_StatusHttpGetIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_StatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_StatusHttpGetIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_StatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_Status_OrdernumberHttpGetIn">
+    <wsdl:part name="Ordernumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_Status_OrdernumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Set_Start_RouteHttpGetIn">
+    <wsdl:part name="Routename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Set_Start_RouteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_scan_ordersHttpGetIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_scan_ordersHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_before_after_saleHttpGetIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_before_after_saleHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getLPRdataHttpGetIn" />
+  <wsdl:message name="getLPRdataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_CollectionHttpGetIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_CollectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_Collection_deliveryboyHttpGetIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_Collection_deliveryboyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Payment_CollectionHttpGetIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Payment_CollectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliveryBoyHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliveryBoyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_User_AccessHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="designation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_User_AccessHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllDeliveryboy_OrdernumberHttpGetIn" />
+  <wsdl:message name="getAllDeliveryboy_OrdernumberHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetallproductsHttpPostIn" />
+  <wsdl:message name="GetallproductsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesHttpPostIn">
+    <wsdl:part name="ordernumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesxmlHttpPostIn">
+    <wsdl:part name="ordernumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetalacartewithnamesxmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightHttpPostIn" />
+  <wsdl:message name="GetCalculateWeightHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalculateWeightNewHttpPostIn" />
+  <wsdl:message name="GetCalculateWeightNewHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderNumbersHttpPostIn" />
+  <wsdl:message name="GetOrderNumbersHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCODorderNumbersHttpPostIn" />
+  <wsdl:message name="GetCODorderNumbersHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetsentsmslogHttpPostIn">
+    <wsdl:part name="FromDate" type="s:string" />
+    <wsdl:part name="ToDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetsentsmslogHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsbyorderidHttpPostIn">
+    <wsdl:part name="ordernumbers" type="s:string" />
+    <wsdl:part name="codordernumbers" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsbyorderidHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsHttpPostIn">
+    <wsdl:part name="FromDate" type="s:string" />
+    <wsdl:part name="ToDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOrderDetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Sendsms_mailHttpPostIn">
+    <wsdl:part name="OrderNumber" type="s:string" />
+    <wsdl:part name="smstype" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Sendsms_mailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceOrderupdateHttpPostIn">
+    <wsdl:part name="ConfirmOrderNumbers" type="s:string" />
+    <wsdl:part name="CODOrderNumbers" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceOrderupdateHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendHttpPostIn">
+    <wsdl:part name="OrderNumber" type="s:string" />
+    <wsdl:part name="Content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getcurrentroutelistHttpPostIn" />
+  <wsdl:message name="getcurrentroutelistHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_OrdernumberHttpPostIn">
+    <wsdl:part name="route_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_OrdernumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllRoute_OrdernumberHttpPostIn" />
+  <wsdl:message name="getAllRoute_OrdernumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="setRoute_Latitude_LongitudeHttpPostIn">
+    <wsdl:part name="route_id" type="s:string" />
+    <wsdl:part name="latitude" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="setRoute_Latitude_LongitudeHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="get_Latitude_Longitude_HistoryHttpPostIn">
+    <wsdl:part name="route_id" type="s:string" />
+    <wsdl:part name="updateddate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_Latitude_Longitude_HistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_Delivery_DetailsHttpPostIn">
+    <wsdl:part name="route_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getRoute_Delivery_DetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_DetailHttpPostIn">
+    <wsdl:part name="route_name" type="s:string" />
+    <wsdl:part name="ordernumber" type="s:string" />
+    <wsdl:part name="order_status" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="driver_name" type="s:string" />
+    <wsdl:part name="driver_phone" type="s:string" />
+    <wsdl:part name="deliveryboy_name" type="s:string" />
+    <wsdl:part name="deliveryboy_phone" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Delivery_DetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_DetailHttpPostIn">
+    <wsdl:part name="route_name" type="s:string" />
+    <wsdl:part name="ordernumber" type="s:string" />
+    <wsdl:part name="collection_amount" type="s:string" />
+    <wsdl:part name="reduction" type="s:string" />
+    <wsdl:part name="balance" type="s:string" />
+    <wsdl:part name="delivery_starttime" type="s:string" />
+    <wsdl:part name="delivery_closetime" type="s:string" />
+    <wsdl:part name="kilometer" type="s:string" />
+    <wsdl:part name="status" type="s:string" />
+    <wsdl:part name="start_close_time" type="s:string" />
+    <wsdl:part name="latitude" type="s:string" />
+    <wsdl:part name="longitude" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_DetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_DetailHttpPostIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_DetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Mobile_OrdersHttpPostIn" />
+  <wsdl:message name="Get_Mobile_OrdersHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Product_Weight_PriceHttpPostIn" />
+  <wsdl:message name="Get_Product_Weight_PriceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getProduct_Weight_Price_for_Before_After_SaleHttpPostIn" />
+  <wsdl:message name="getProduct_Weight_Price_for_Before_After_SaleHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="getPurchaseHttpPostIn" />
+  <wsdl:message name="getPurchaseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_datewiseHttpPostIn">
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_datewiseHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_Datewise_pidHttpPostIn">
+    <wsdl:part name="from" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="pid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getPurchase_Datewise_pidHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Tray_LoadingHttpPostIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Tray_LoadingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Tray_LoadingHttpPostIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Tray_LoadingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Tray_LoadingHttpPostIn" />
+  <wsdl:message name="Get_Tray_LoadingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_StatusHttpPostIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Update_Delivery_StatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_StatusHttpPostIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_StatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_Status_OrdernumberHttpPostIn">
+    <wsdl:part name="Ordernumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Delivery_Status_OrdernumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Set_Start_RouteHttpPostIn">
+    <wsdl:part name="Routename" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Set_Start_RouteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_scan_ordersHttpPostIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_scan_ordersHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_before_after_saleHttpPostIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="get_ffhp_before_after_saleHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getLPRdataHttpPostIn" />
+  <wsdl:message name="getLPRdataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_CollectionHttpPostIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_CollectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_Collection_deliveryboyHttpPostIn">
+    <wsdl:part name="jsonstring" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Insert_Payment_Collection_deliveryboyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Payment_CollectionHttpPostIn">
+    <wsdl:part name="fromdate" type="s:string" />
+    <wsdl:part name="todate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_Payment_CollectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliveryBoyHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_DeliveryBoyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_User_AccessHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="designation" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Get_User_AccessHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllDeliveryboy_OrdernumberHttpPostIn" />
+  <wsdl:message name="getAllDeliveryboy_OrdernumberHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ffhpserviceSoap">
+    <wsdl:operation name="Getallproducts">
+      <wsdl:input message="tns:GetallproductsSoapIn" />
+      <wsdl:output message="tns:GetallproductsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnames">
+      <wsdl:input message="tns:GetalacartewithnamesSoapIn" />
+      <wsdl:output message="tns:GetalacartewithnamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnamesxml">
+      <wsdl:input message="tns:GetalacartewithnamesxmlSoapIn" />
+      <wsdl:output message="tns:GetalacartewithnamesxmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeight">
+      <wsdl:input message="tns:GetCalculateWeightSoapIn" />
+      <wsdl:output message="tns:GetCalculateWeightSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeightNew">
+      <wsdl:input message="tns:GetCalculateWeightNewSoapIn" />
+      <wsdl:output message="tns:GetCalculateWeightNewSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNumbers">
+      <wsdl:input message="tns:GetOrderNumbersSoapIn" />
+      <wsdl:output message="tns:GetOrderNumbersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODorderNumbers">
+      <wsdl:input message="tns:GetCODorderNumbersSoapIn" />
+      <wsdl:output message="tns:GetCODorderNumbersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getsentsmslog">
+      <wsdl:input message="tns:GetsentsmslogSoapIn" />
+      <wsdl:output message="tns:GetsentsmslogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailsbyorderid">
+      <wsdl:input message="tns:GetOrderDetailsbyorderidSoapIn" />
+      <wsdl:output message="tns:GetOrderDetailsbyorderidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <wsdl:input message="tns:GetOrderDetailsSoapIn" />
+      <wsdl:output message="tns:GetOrderDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendsms_mail">
+      <wsdl:input message="tns:Sendsms_mailSoapIn" />
+      <wsdl:output message="tns:Sendsms_mailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceOrderupdate">
+      <wsdl:input message="tns:ServiceOrderupdateSoapIn" />
+      <wsdl:output message="tns:ServiceOrderupdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <wsdl:input message="tns:MailSendSoapIn" />
+      <wsdl:output message="tns:MailSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcurrentroutelist">
+      <wsdl:input message="tns:getcurrentroutelistSoapIn" />
+      <wsdl:output message="tns:getcurrentroutelistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Ordernumber">
+      <wsdl:input message="tns:getRoute_OrdernumberSoapIn" />
+      <wsdl:output message="tns:getRoute_OrdernumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoute_Ordernumber">
+      <wsdl:input message="tns:getAllRoute_OrdernumberSoapIn" />
+      <wsdl:output message="tns:getAllRoute_OrdernumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setRoute_Latitude_Longitude">
+      <wsdl:input message="tns:setRoute_Latitude_LongitudeSoapIn" />
+      <wsdl:output message="tns:setRoute_Latitude_LongitudeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_Latitude_Longitude_History">
+      <wsdl:input message="tns:get_Latitude_Longitude_HistorySoapIn" />
+      <wsdl:output message="tns:get_Latitude_Longitude_HistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Delivery_Details">
+      <wsdl:input message="tns:getRoute_Delivery_DetailsSoapIn" />
+      <wsdl:output message="tns:getRoute_Delivery_DetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Detail">
+      <wsdl:input message="tns:Insert_Delivery_DetailSoapIn" />
+      <wsdl:output message="tns:Insert_Delivery_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Detail">
+      <wsdl:input message="tns:Update_Delivery_DetailSoapIn" />
+      <wsdl:output message="tns:Update_Delivery_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Detail">
+      <wsdl:input message="tns:Get_Delivery_DetailSoapIn" />
+      <wsdl:output message="tns:Get_Delivery_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mobile_Orders">
+      <wsdl:input message="tns:Get_Mobile_OrdersSoapIn" />
+      <wsdl:output message="tns:Get_Mobile_OrdersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Product_Weight_Price">
+      <wsdl:input message="tns:Get_Product_Weight_PriceSoapIn" />
+      <wsdl:output message="tns:Get_Product_Weight_PriceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProduct_Weight_Price_for_Before_After_Sale">
+      <wsdl:input message="tns:getProduct_Weight_Price_for_Before_After_SaleSoapIn" />
+      <wsdl:output message="tns:getProduct_Weight_Price_for_Before_After_SaleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <wsdl:input message="tns:getPurchaseSoapIn" />
+      <wsdl:output message="tns:getPurchaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_datewise">
+      <wsdl:input message="tns:getPurchase_datewiseSoapIn" />
+      <wsdl:output message="tns:getPurchase_datewiseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_Datewise_pid">
+      <wsdl:input message="tns:getPurchase_Datewise_pidSoapIn" />
+      <wsdl:output message="tns:getPurchase_Datewise_pidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Tray_Loading">
+      <wsdl:input message="tns:Update_Tray_LoadingSoapIn" />
+      <wsdl:output message="tns:Update_Tray_LoadingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Tray_Loading">
+      <wsdl:input message="tns:Insert_Tray_LoadingSoapIn" />
+      <wsdl:output message="tns:Insert_Tray_LoadingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tray_Loading">
+      <wsdl:input message="tns:Get_Tray_LoadingSoapIn" />
+      <wsdl:output message="tns:Get_Tray_LoadingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Status">
+      <wsdl:input message="tns:Insert_Delivery_StatusSoapIn" />
+      <wsdl:output message="tns:Insert_Delivery_StatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Status">
+      <wsdl:input message="tns:Update_Delivery_StatusSoapIn" />
+      <wsdl:output message="tns:Update_Delivery_StatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status">
+      <wsdl:input message="tns:Get_Delivery_StatusSoapIn" />
+      <wsdl:output message="tns:Get_Delivery_StatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status_Ordernumber">
+      <wsdl:input message="tns:Get_Delivery_Status_OrdernumberSoapIn" />
+      <wsdl:output message="tns:Get_Delivery_Status_OrdernumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Start_Route">
+      <wsdl:input message="tns:Set_Start_RouteSoapIn" />
+      <wsdl:output message="tns:Set_Start_RouteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_scan_orders">
+      <wsdl:input message="tns:get_ffhp_scan_ordersSoapIn" />
+      <wsdl:output message="tns:get_ffhp_scan_ordersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_before_after_sale">
+      <wsdl:input message="tns:get_ffhp_before_after_saleSoapIn" />
+      <wsdl:output message="tns:get_ffhp_before_after_saleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLPRdata">
+      <wsdl:input message="tns:getLPRdataSoapIn" />
+      <wsdl:output message="tns:getLPRdataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection">
+      <wsdl:input message="tns:Insert_Payment_CollectionSoapIn" />
+      <wsdl:output message="tns:Insert_Payment_CollectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection_deliveryboy">
+      <wsdl:input message="tns:Insert_Payment_Collection_deliveryboySoapIn" />
+      <wsdl:output message="tns:Insert_Payment_Collection_deliveryboySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Payment_Collection">
+      <wsdl:input message="tns:Get_Payment_CollectionSoapIn" />
+      <wsdl:output message="tns:Get_Payment_CollectionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Stock_Sale_Data">
+      <wsdl:input message="tns:Upload_Stock_Sale_DataSoapIn" />
+      <wsdl:output message="tns:Upload_Stock_Sale_DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Upload_ffhporders">
+      <wsdl:input message="tns:Upload_ffhpordersSoapIn" />
+      <wsdl:output message="tns:Upload_ffhpordersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliveryBoy">
+      <wsdl:input message="tns:Get_DeliveryBoySoapIn" />
+      <wsdl:output message="tns:Get_DeliveryBoySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Access">
+      <wsdl:input message="tns:Get_User_AccessSoapIn" />
+      <wsdl:output message="tns:Get_User_AccessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDeliveryboy_Ordernumber">
+      <wsdl:input message="tns:getAllDeliveryboy_OrdernumberSoapIn" />
+      <wsdl:output message="tns:getAllDeliveryboy_OrdernumberSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ffhpserviceHttpGet">
+    <wsdl:operation name="Getallproducts">
+      <wsdl:input message="tns:GetallproductsHttpGetIn" />
+      <wsdl:output message="tns:GetallproductsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnames">
+      <wsdl:input message="tns:GetalacartewithnamesHttpGetIn" />
+      <wsdl:output message="tns:GetalacartewithnamesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnamesxml">
+      <wsdl:input message="tns:GetalacartewithnamesxmlHttpGetIn" />
+      <wsdl:output message="tns:GetalacartewithnamesxmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeight">
+      <wsdl:input message="tns:GetCalculateWeightHttpGetIn" />
+      <wsdl:output message="tns:GetCalculateWeightHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeightNew">
+      <wsdl:input message="tns:GetCalculateWeightNewHttpGetIn" />
+      <wsdl:output message="tns:GetCalculateWeightNewHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNumbers">
+      <wsdl:input message="tns:GetOrderNumbersHttpGetIn" />
+      <wsdl:output message="tns:GetOrderNumbersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODorderNumbers">
+      <wsdl:input message="tns:GetCODorderNumbersHttpGetIn" />
+      <wsdl:output message="tns:GetCODorderNumbersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getsentsmslog">
+      <wsdl:input message="tns:GetsentsmslogHttpGetIn" />
+      <wsdl:output message="tns:GetsentsmslogHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailsbyorderid">
+      <wsdl:input message="tns:GetOrderDetailsbyorderidHttpGetIn" />
+      <wsdl:output message="tns:GetOrderDetailsbyorderidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <wsdl:input message="tns:GetOrderDetailsHttpGetIn" />
+      <wsdl:output message="tns:GetOrderDetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendsms_mail">
+      <wsdl:input message="tns:Sendsms_mailHttpGetIn" />
+      <wsdl:output message="tns:Sendsms_mailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceOrderupdate">
+      <wsdl:input message="tns:ServiceOrderupdateHttpGetIn" />
+      <wsdl:output message="tns:ServiceOrderupdateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <wsdl:input message="tns:MailSendHttpGetIn" />
+      <wsdl:output message="tns:MailSendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcurrentroutelist">
+      <wsdl:input message="tns:getcurrentroutelistHttpGetIn" />
+      <wsdl:output message="tns:getcurrentroutelistHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Ordernumber">
+      <wsdl:input message="tns:getRoute_OrdernumberHttpGetIn" />
+      <wsdl:output message="tns:getRoute_OrdernumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoute_Ordernumber">
+      <wsdl:input message="tns:getAllRoute_OrdernumberHttpGetIn" />
+      <wsdl:output message="tns:getAllRoute_OrdernumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setRoute_Latitude_Longitude">
+      <wsdl:input message="tns:setRoute_Latitude_LongitudeHttpGetIn" />
+      <wsdl:output message="tns:setRoute_Latitude_LongitudeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_Latitude_Longitude_History">
+      <wsdl:input message="tns:get_Latitude_Longitude_HistoryHttpGetIn" />
+      <wsdl:output message="tns:get_Latitude_Longitude_HistoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Delivery_Details">
+      <wsdl:input message="tns:getRoute_Delivery_DetailsHttpGetIn" />
+      <wsdl:output message="tns:getRoute_Delivery_DetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Detail">
+      <wsdl:input message="tns:Insert_Delivery_DetailHttpGetIn" />
+      <wsdl:output message="tns:Insert_Delivery_DetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Detail">
+      <wsdl:input message="tns:Update_Delivery_DetailHttpGetIn" />
+      <wsdl:output message="tns:Update_Delivery_DetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Detail">
+      <wsdl:input message="tns:Get_Delivery_DetailHttpGetIn" />
+      <wsdl:output message="tns:Get_Delivery_DetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mobile_Orders">
+      <wsdl:input message="tns:Get_Mobile_OrdersHttpGetIn" />
+      <wsdl:output message="tns:Get_Mobile_OrdersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Product_Weight_Price">
+      <wsdl:input message="tns:Get_Product_Weight_PriceHttpGetIn" />
+      <wsdl:output message="tns:Get_Product_Weight_PriceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProduct_Weight_Price_for_Before_After_Sale">
+      <wsdl:input message="tns:getProduct_Weight_Price_for_Before_After_SaleHttpGetIn" />
+      <wsdl:output message="tns:getProduct_Weight_Price_for_Before_After_SaleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <wsdl:input message="tns:getPurchaseHttpGetIn" />
+      <wsdl:output message="tns:getPurchaseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_datewise">
+      <wsdl:input message="tns:getPurchase_datewiseHttpGetIn" />
+      <wsdl:output message="tns:getPurchase_datewiseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_Datewise_pid">
+      <wsdl:input message="tns:getPurchase_Datewise_pidHttpGetIn" />
+      <wsdl:output message="tns:getPurchase_Datewise_pidHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Tray_Loading">
+      <wsdl:input message="tns:Update_Tray_LoadingHttpGetIn" />
+      <wsdl:output message="tns:Update_Tray_LoadingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Tray_Loading">
+      <wsdl:input message="tns:Insert_Tray_LoadingHttpGetIn" />
+      <wsdl:output message="tns:Insert_Tray_LoadingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tray_Loading">
+      <wsdl:input message="tns:Get_Tray_LoadingHttpGetIn" />
+      <wsdl:output message="tns:Get_Tray_LoadingHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Status">
+      <wsdl:input message="tns:Update_Delivery_StatusHttpGetIn" />
+      <wsdl:output message="tns:Update_Delivery_StatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status">
+      <wsdl:input message="tns:Get_Delivery_StatusHttpGetIn" />
+      <wsdl:output message="tns:Get_Delivery_StatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status_Ordernumber">
+      <wsdl:input message="tns:Get_Delivery_Status_OrdernumberHttpGetIn" />
+      <wsdl:output message="tns:Get_Delivery_Status_OrdernumberHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Start_Route">
+      <wsdl:input message="tns:Set_Start_RouteHttpGetIn" />
+      <wsdl:output message="tns:Set_Start_RouteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_scan_orders">
+      <wsdl:input message="tns:get_ffhp_scan_ordersHttpGetIn" />
+      <wsdl:output message="tns:get_ffhp_scan_ordersHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_before_after_sale">
+      <wsdl:input message="tns:get_ffhp_before_after_saleHttpGetIn" />
+      <wsdl:output message="tns:get_ffhp_before_after_saleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLPRdata">
+      <wsdl:input message="tns:getLPRdataHttpGetIn" />
+      <wsdl:output message="tns:getLPRdataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection">
+      <wsdl:input message="tns:Insert_Payment_CollectionHttpGetIn" />
+      <wsdl:output message="tns:Insert_Payment_CollectionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection_deliveryboy">
+      <wsdl:input message="tns:Insert_Payment_Collection_deliveryboyHttpGetIn" />
+      <wsdl:output message="tns:Insert_Payment_Collection_deliveryboyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Payment_Collection">
+      <wsdl:input message="tns:Get_Payment_CollectionHttpGetIn" />
+      <wsdl:output message="tns:Get_Payment_CollectionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliveryBoy">
+      <wsdl:input message="tns:Get_DeliveryBoyHttpGetIn" />
+      <wsdl:output message="tns:Get_DeliveryBoyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Access">
+      <wsdl:input message="tns:Get_User_AccessHttpGetIn" />
+      <wsdl:output message="tns:Get_User_AccessHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDeliveryboy_Ordernumber">
+      <wsdl:input message="tns:getAllDeliveryboy_OrdernumberHttpGetIn" />
+      <wsdl:output message="tns:getAllDeliveryboy_OrdernumberHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ffhpserviceHttpPost">
+    <wsdl:operation name="Getallproducts">
+      <wsdl:input message="tns:GetallproductsHttpPostIn" />
+      <wsdl:output message="tns:GetallproductsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnames">
+      <wsdl:input message="tns:GetalacartewithnamesHttpPostIn" />
+      <wsdl:output message="tns:GetalacartewithnamesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnamesxml">
+      <wsdl:input message="tns:GetalacartewithnamesxmlHttpPostIn" />
+      <wsdl:output message="tns:GetalacartewithnamesxmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeight">
+      <wsdl:input message="tns:GetCalculateWeightHttpPostIn" />
+      <wsdl:output message="tns:GetCalculateWeightHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeightNew">
+      <wsdl:input message="tns:GetCalculateWeightNewHttpPostIn" />
+      <wsdl:output message="tns:GetCalculateWeightNewHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNumbers">
+      <wsdl:input message="tns:GetOrderNumbersHttpPostIn" />
+      <wsdl:output message="tns:GetOrderNumbersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCODorderNumbers">
+      <wsdl:input message="tns:GetCODorderNumbersHttpPostIn" />
+      <wsdl:output message="tns:GetCODorderNumbersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getsentsmslog">
+      <wsdl:input message="tns:GetsentsmslogHttpPostIn" />
+      <wsdl:output message="tns:GetsentsmslogHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailsbyorderid">
+      <wsdl:input message="tns:GetOrderDetailsbyorderidHttpPostIn" />
+      <wsdl:output message="tns:GetOrderDetailsbyorderidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <wsdl:input message="tns:GetOrderDetailsHttpPostIn" />
+      <wsdl:output message="tns:GetOrderDetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendsms_mail">
+      <wsdl:input message="tns:Sendsms_mailHttpPostIn" />
+      <wsdl:output message="tns:Sendsms_mailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceOrderupdate">
+      <wsdl:input message="tns:ServiceOrderupdateHttpPostIn" />
+      <wsdl:output message="tns:ServiceOrderupdateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <wsdl:input message="tns:MailSendHttpPostIn" />
+      <wsdl:output message="tns:MailSendHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getcurrentroutelist">
+      <wsdl:input message="tns:getcurrentroutelistHttpPostIn" />
+      <wsdl:output message="tns:getcurrentroutelistHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Ordernumber">
+      <wsdl:input message="tns:getRoute_OrdernumberHttpPostIn" />
+      <wsdl:output message="tns:getRoute_OrdernumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoute_Ordernumber">
+      <wsdl:input message="tns:getAllRoute_OrdernumberHttpPostIn" />
+      <wsdl:output message="tns:getAllRoute_OrdernumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setRoute_Latitude_Longitude">
+      <wsdl:input message="tns:setRoute_Latitude_LongitudeHttpPostIn" />
+      <wsdl:output message="tns:setRoute_Latitude_LongitudeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_Latitude_Longitude_History">
+      <wsdl:input message="tns:get_Latitude_Longitude_HistoryHttpPostIn" />
+      <wsdl:output message="tns:get_Latitude_Longitude_HistoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Delivery_Details">
+      <wsdl:input message="tns:getRoute_Delivery_DetailsHttpPostIn" />
+      <wsdl:output message="tns:getRoute_Delivery_DetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Detail">
+      <wsdl:input message="tns:Insert_Delivery_DetailHttpPostIn" />
+      <wsdl:output message="tns:Insert_Delivery_DetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Detail">
+      <wsdl:input message="tns:Update_Delivery_DetailHttpPostIn" />
+      <wsdl:output message="tns:Update_Delivery_DetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Detail">
+      <wsdl:input message="tns:Get_Delivery_DetailHttpPostIn" />
+      <wsdl:output message="tns:Get_Delivery_DetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mobile_Orders">
+      <wsdl:input message="tns:Get_Mobile_OrdersHttpPostIn" />
+      <wsdl:output message="tns:Get_Mobile_OrdersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Product_Weight_Price">
+      <wsdl:input message="tns:Get_Product_Weight_PriceHttpPostIn" />
+      <wsdl:output message="tns:Get_Product_Weight_PriceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProduct_Weight_Price_for_Before_After_Sale">
+      <wsdl:input message="tns:getProduct_Weight_Price_for_Before_After_SaleHttpPostIn" />
+      <wsdl:output message="tns:getProduct_Weight_Price_for_Before_After_SaleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <wsdl:input message="tns:getPurchaseHttpPostIn" />
+      <wsdl:output message="tns:getPurchaseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_datewise">
+      <wsdl:input message="tns:getPurchase_datewiseHttpPostIn" />
+      <wsdl:output message="tns:getPurchase_datewiseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_Datewise_pid">
+      <wsdl:input message="tns:getPurchase_Datewise_pidHttpPostIn" />
+      <wsdl:output message="tns:getPurchase_Datewise_pidHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Tray_Loading">
+      <wsdl:input message="tns:Update_Tray_LoadingHttpPostIn" />
+      <wsdl:output message="tns:Update_Tray_LoadingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Tray_Loading">
+      <wsdl:input message="tns:Insert_Tray_LoadingHttpPostIn" />
+      <wsdl:output message="tns:Insert_Tray_LoadingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tray_Loading">
+      <wsdl:input message="tns:Get_Tray_LoadingHttpPostIn" />
+      <wsdl:output message="tns:Get_Tray_LoadingHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Status">
+      <wsdl:input message="tns:Update_Delivery_StatusHttpPostIn" />
+      <wsdl:output message="tns:Update_Delivery_StatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status">
+      <wsdl:input message="tns:Get_Delivery_StatusHttpPostIn" />
+      <wsdl:output message="tns:Get_Delivery_StatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status_Ordernumber">
+      <wsdl:input message="tns:Get_Delivery_Status_OrdernumberHttpPostIn" />
+      <wsdl:output message="tns:Get_Delivery_Status_OrdernumberHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Start_Route">
+      <wsdl:input message="tns:Set_Start_RouteHttpPostIn" />
+      <wsdl:output message="tns:Set_Start_RouteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_scan_orders">
+      <wsdl:input message="tns:get_ffhp_scan_ordersHttpPostIn" />
+      <wsdl:output message="tns:get_ffhp_scan_ordersHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_before_after_sale">
+      <wsdl:input message="tns:get_ffhp_before_after_saleHttpPostIn" />
+      <wsdl:output message="tns:get_ffhp_before_after_saleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLPRdata">
+      <wsdl:input message="tns:getLPRdataHttpPostIn" />
+      <wsdl:output message="tns:getLPRdataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection">
+      <wsdl:input message="tns:Insert_Payment_CollectionHttpPostIn" />
+      <wsdl:output message="tns:Insert_Payment_CollectionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection_deliveryboy">
+      <wsdl:input message="tns:Insert_Payment_Collection_deliveryboyHttpPostIn" />
+      <wsdl:output message="tns:Insert_Payment_Collection_deliveryboyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Payment_Collection">
+      <wsdl:input message="tns:Get_Payment_CollectionHttpPostIn" />
+      <wsdl:output message="tns:Get_Payment_CollectionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliveryBoy">
+      <wsdl:input message="tns:Get_DeliveryBoyHttpPostIn" />
+      <wsdl:output message="tns:Get_DeliveryBoyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Access">
+      <wsdl:input message="tns:Get_User_AccessHttpPostIn" />
+      <wsdl:output message="tns:Get_User_AccessHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllDeliveryboy_Ordernumber">
+      <wsdl:input message="tns:getAllDeliveryboy_OrdernumberHttpPostIn" />
+      <wsdl:output message="tns:getAllDeliveryboy_OrdernumberHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ffhpserviceSoap" type="tns:ffhpserviceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Getallproducts">
+      <soap:operation soapAction="http://tempuri.org/Getallproducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnames">
+      <soap:operation soapAction="http://tempuri.org/Getalacartewithnames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnamesxml">
+      <soap:operation soapAction="http://tempuri.org/Getalacartewithnamesxml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeight">
+      <soap:operation soapAction="http://tempuri.org/GetCalculateWeight" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeightNew">
+      <soap:operation soapAction="http://tempuri.org/GetCalculateWeightNew" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNumbers">
+      <soap:operation soapAction="http://tempuri.org/GetOrderNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODorderNumbers">
+      <soap:operation soapAction="http://tempuri.org/GetCODorderNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsentsmslog">
+      <soap:operation soapAction="http://tempuri.org/Getsentsmslog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailsbyorderid">
+      <soap:operation soapAction="http://tempuri.org/GetOrderDetailsbyorderid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/GetOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendsms_mail">
+      <soap:operation soapAction="http://tempuri.org/Sendsms_mail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceOrderupdate">
+      <soap:operation soapAction="http://tempuri.org/ServiceOrderupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <soap:operation soapAction="http://tempuri.org/MailSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcurrentroutelist">
+      <soap:operation soapAction="http://tempuri.org/getcurrentroutelist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Ordernumber">
+      <soap:operation soapAction="http://tempuri.org/getRoute_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoute_Ordernumber">
+      <soap:operation soapAction="http://tempuri.org/getAllRoute_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRoute_Latitude_Longitude">
+      <soap:operation soapAction="http://tempuri.org/setRoute_Latitude_Longitude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Latitude_Longitude_History">
+      <soap:operation soapAction="http://tempuri.org/get_Latitude_Longitude_History" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Delivery_Details">
+      <soap:operation soapAction="http://tempuri.org/getRoute_Delivery_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Detail">
+      <soap:operation soapAction="http://tempuri.org/Insert_Delivery_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Detail">
+      <soap:operation soapAction="http://tempuri.org/Update_Delivery_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Detail">
+      <soap:operation soapAction="http://tempuri.org/Get_Delivery_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mobile_Orders">
+      <soap:operation soapAction="http://tempuri.org/Get_Mobile_Orders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Product_Weight_Price">
+      <soap:operation soapAction="http://tempuri.org/Get_Product_Weight_Price" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProduct_Weight_Price_for_Before_After_Sale">
+      <soap:operation soapAction="http://tempuri.org/getProduct_Weight_Price_for_Before_After_Sale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <soap:operation soapAction="http://tempuri.org/getPurchase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_datewise">
+      <soap:operation soapAction="http://tempuri.org/getPurchase_datewise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_Datewise_pid">
+      <soap:operation soapAction="http://tempuri.org/getPurchase_Datewise_pid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Tray_Loading">
+      <soap:operation soapAction="http://tempuri.org/Update_Tray_Loading" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Tray_Loading">
+      <soap:operation soapAction="http://tempuri.org/Insert_Tray_Loading" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tray_Loading">
+      <soap:operation soapAction="http://tempuri.org/Get_Tray_Loading" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Status">
+      <soap:operation soapAction="http://tempuri.org/Insert_Delivery_Status" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Status">
+      <soap:operation soapAction="http://tempuri.org/Update_Delivery_Status" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status">
+      <soap:operation soapAction="http://tempuri.org/Get_Delivery_Status" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status_Ordernumber">
+      <soap:operation soapAction="http://tempuri.org/Get_Delivery_Status_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Start_Route">
+      <soap:operation soapAction="http://tempuri.org/Set_Start_Route" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_scan_orders">
+      <soap:operation soapAction="http://tempuri.org/get_ffhp_scan_orders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_before_after_sale">
+      <soap:operation soapAction="http://tempuri.org/get_ffhp_before_after_sale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLPRdata">
+      <soap:operation soapAction="http://tempuri.org/getLPRdata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection">
+      <soap:operation soapAction="http://tempuri.org/Insert_Payment_Collection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection_deliveryboy">
+      <soap:operation soapAction="http://tempuri.org/Insert_Payment_Collection_deliveryboy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Payment_Collection">
+      <soap:operation soapAction="http://tempuri.org/Get_Payment_Collection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Stock_Sale_Data">
+      <soap:operation soapAction="http://tempuri.org/Upload_Stock_Sale_Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_ffhporders">
+      <soap:operation soapAction="http://tempuri.org/Upload_ffhporders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliveryBoy">
+      <soap:operation soapAction="http://tempuri.org/Get_DeliveryBoy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Access">
+      <soap:operation soapAction="http://tempuri.org/Get_User_Access" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDeliveryboy_Ordernumber">
+      <soap:operation soapAction="http://tempuri.org/getAllDeliveryboy_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ffhpserviceSoap12" type="tns:ffhpserviceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Getallproducts">
+      <soap12:operation soapAction="http://tempuri.org/Getallproducts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnames">
+      <soap12:operation soapAction="http://tempuri.org/Getalacartewithnames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnamesxml">
+      <soap12:operation soapAction="http://tempuri.org/Getalacartewithnamesxml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeight">
+      <soap12:operation soapAction="http://tempuri.org/GetCalculateWeight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeightNew">
+      <soap12:operation soapAction="http://tempuri.org/GetCalculateWeightNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNumbers">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODorderNumbers">
+      <soap12:operation soapAction="http://tempuri.org/GetCODorderNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsentsmslog">
+      <soap12:operation soapAction="http://tempuri.org/Getsentsmslog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailsbyorderid">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderDetailsbyorderid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetOrderDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendsms_mail">
+      <soap12:operation soapAction="http://tempuri.org/Sendsms_mail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceOrderupdate">
+      <soap12:operation soapAction="http://tempuri.org/ServiceOrderupdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <soap12:operation soapAction="http://tempuri.org/MailSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcurrentroutelist">
+      <soap12:operation soapAction="http://tempuri.org/getcurrentroutelist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Ordernumber">
+      <soap12:operation soapAction="http://tempuri.org/getRoute_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoute_Ordernumber">
+      <soap12:operation soapAction="http://tempuri.org/getAllRoute_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRoute_Latitude_Longitude">
+      <soap12:operation soapAction="http://tempuri.org/setRoute_Latitude_Longitude" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Latitude_Longitude_History">
+      <soap12:operation soapAction="http://tempuri.org/get_Latitude_Longitude_History" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Delivery_Details">
+      <soap12:operation soapAction="http://tempuri.org/getRoute_Delivery_Details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Detail">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Delivery_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Detail">
+      <soap12:operation soapAction="http://tempuri.org/Update_Delivery_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Detail">
+      <soap12:operation soapAction="http://tempuri.org/Get_Delivery_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mobile_Orders">
+      <soap12:operation soapAction="http://tempuri.org/Get_Mobile_Orders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Product_Weight_Price">
+      <soap12:operation soapAction="http://tempuri.org/Get_Product_Weight_Price" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProduct_Weight_Price_for_Before_After_Sale">
+      <soap12:operation soapAction="http://tempuri.org/getProduct_Weight_Price_for_Before_After_Sale" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <soap12:operation soapAction="http://tempuri.org/getPurchase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_datewise">
+      <soap12:operation soapAction="http://tempuri.org/getPurchase_datewise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_Datewise_pid">
+      <soap12:operation soapAction="http://tempuri.org/getPurchase_Datewise_pid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Tray_Loading">
+      <soap12:operation soapAction="http://tempuri.org/Update_Tray_Loading" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Tray_Loading">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Tray_Loading" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tray_Loading">
+      <soap12:operation soapAction="http://tempuri.org/Get_Tray_Loading" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Status">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Delivery_Status" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Status">
+      <soap12:operation soapAction="http://tempuri.org/Update_Delivery_Status" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status">
+      <soap12:operation soapAction="http://tempuri.org/Get_Delivery_Status" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status_Ordernumber">
+      <soap12:operation soapAction="http://tempuri.org/Get_Delivery_Status_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Start_Route">
+      <soap12:operation soapAction="http://tempuri.org/Set_Start_Route" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_scan_orders">
+      <soap12:operation soapAction="http://tempuri.org/get_ffhp_scan_orders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_before_after_sale">
+      <soap12:operation soapAction="http://tempuri.org/get_ffhp_before_after_sale" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLPRdata">
+      <soap12:operation soapAction="http://tempuri.org/getLPRdata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Payment_Collection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection_deliveryboy">
+      <soap12:operation soapAction="http://tempuri.org/Insert_Payment_Collection_deliveryboy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Payment_Collection">
+      <soap12:operation soapAction="http://tempuri.org/Get_Payment_Collection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_Stock_Sale_Data">
+      <soap12:operation soapAction="http://tempuri.org/Upload_Stock_Sale_Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Upload_ffhporders">
+      <soap12:operation soapAction="http://tempuri.org/Upload_ffhporders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliveryBoy">
+      <soap12:operation soapAction="http://tempuri.org/Get_DeliveryBoy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Access">
+      <soap12:operation soapAction="http://tempuri.org/Get_User_Access" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDeliveryboy_Ordernumber">
+      <soap12:operation soapAction="http://tempuri.org/getAllDeliveryboy_Ordernumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ffhpserviceHttpGet" type="tns:ffhpserviceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Getallproducts">
+      <http:operation location="/Getallproducts" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnames">
+      <http:operation location="/Getalacartewithnames" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnamesxml">
+      <http:operation location="/Getalacartewithnamesxml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeight">
+      <http:operation location="/GetCalculateWeight" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeightNew">
+      <http:operation location="/GetCalculateWeightNew" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNumbers">
+      <http:operation location="/GetOrderNumbers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODorderNumbers">
+      <http:operation location="/GetCODorderNumbers" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsentsmslog">
+      <http:operation location="/Getsentsmslog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailsbyorderid">
+      <http:operation location="/GetOrderDetailsbyorderid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <http:operation location="/GetOrderDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendsms_mail">
+      <http:operation location="/Sendsms_mail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceOrderupdate">
+      <http:operation location="/ServiceOrderupdate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <http:operation location="/MailSend" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcurrentroutelist">
+      <http:operation location="/getcurrentroutelist" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Ordernumber">
+      <http:operation location="/getRoute_Ordernumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoute_Ordernumber">
+      <http:operation location="/getAllRoute_Ordernumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRoute_Latitude_Longitude">
+      <http:operation location="/setRoute_Latitude_Longitude" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Latitude_Longitude_History">
+      <http:operation location="/get_Latitude_Longitude_History" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Delivery_Details">
+      <http:operation location="/getRoute_Delivery_Details" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Detail">
+      <http:operation location="/Insert_Delivery_Detail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Detail">
+      <http:operation location="/Update_Delivery_Detail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Detail">
+      <http:operation location="/Get_Delivery_Detail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mobile_Orders">
+      <http:operation location="/Get_Mobile_Orders" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Product_Weight_Price">
+      <http:operation location="/Get_Product_Weight_Price" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProduct_Weight_Price_for_Before_After_Sale">
+      <http:operation location="/getProduct_Weight_Price_for_Before_After_Sale" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <http:operation location="/getPurchase" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_datewise">
+      <http:operation location="/getPurchase_datewise" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_Datewise_pid">
+      <http:operation location="/getPurchase_Datewise_pid" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Tray_Loading">
+      <http:operation location="/Update_Tray_Loading" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Tray_Loading">
+      <http:operation location="/Insert_Tray_Loading" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tray_Loading">
+      <http:operation location="/Get_Tray_Loading" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Status">
+      <http:operation location="/Update_Delivery_Status" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status">
+      <http:operation location="/Get_Delivery_Status" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status_Ordernumber">
+      <http:operation location="/Get_Delivery_Status_Ordernumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Start_Route">
+      <http:operation location="/Set_Start_Route" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_scan_orders">
+      <http:operation location="/get_ffhp_scan_orders" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_before_after_sale">
+      <http:operation location="/get_ffhp_before_after_sale" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLPRdata">
+      <http:operation location="/getLPRdata" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection">
+      <http:operation location="/Insert_Payment_Collection" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection_deliveryboy">
+      <http:operation location="/Insert_Payment_Collection_deliveryboy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Payment_Collection">
+      <http:operation location="/Get_Payment_Collection" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliveryBoy">
+      <http:operation location="/Get_DeliveryBoy" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Access">
+      <http:operation location="/Get_User_Access" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDeliveryboy_Ordernumber">
+      <http:operation location="/getAllDeliveryboy_Ordernumber" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ffhpserviceHttpPost" type="tns:ffhpserviceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Getallproducts">
+      <http:operation location="/Getallproducts" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnames">
+      <http:operation location="/Getalacartewithnames" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getalacartewithnamesxml">
+      <http:operation location="/Getalacartewithnamesxml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeight">
+      <http:operation location="/GetCalculateWeight" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalculateWeightNew">
+      <http:operation location="/GetCalculateWeightNew" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderNumbers">
+      <http:operation location="/GetOrderNumbers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCODorderNumbers">
+      <http:operation location="/GetCODorderNumbers" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsentsmslog">
+      <http:operation location="/Getsentsmslog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetailsbyorderid">
+      <http:operation location="/GetOrderDetailsbyorderid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderDetails">
+      <http:operation location="/GetOrderDetails" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendsms_mail">
+      <http:operation location="/Sendsms_mail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceOrderupdate">
+      <http:operation location="/ServiceOrderupdate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <http:operation location="/MailSend" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcurrentroutelist">
+      <http:operation location="/getcurrentroutelist" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Ordernumber">
+      <http:operation location="/getRoute_Ordernumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllRoute_Ordernumber">
+      <http:operation location="/getAllRoute_Ordernumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRoute_Latitude_Longitude">
+      <http:operation location="/setRoute_Latitude_Longitude" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_Latitude_Longitude_History">
+      <http:operation location="/get_Latitude_Longitude_History" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute_Delivery_Details">
+      <http:operation location="/getRoute_Delivery_Details" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Delivery_Detail">
+      <http:operation location="/Insert_Delivery_Detail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Detail">
+      <http:operation location="/Update_Delivery_Detail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Detail">
+      <http:operation location="/Get_Delivery_Detail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Mobile_Orders">
+      <http:operation location="/Get_Mobile_Orders" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Product_Weight_Price">
+      <http:operation location="/Get_Product_Weight_Price" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProduct_Weight_Price_for_Before_After_Sale">
+      <http:operation location="/getProduct_Weight_Price_for_Before_After_Sale" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase">
+      <http:operation location="/getPurchase" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_datewise">
+      <http:operation location="/getPurchase_datewise" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPurchase_Datewise_pid">
+      <http:operation location="/getPurchase_Datewise_pid" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Tray_Loading">
+      <http:operation location="/Update_Tray_Loading" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Tray_Loading">
+      <http:operation location="/Insert_Tray_Loading" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Tray_Loading">
+      <http:operation location="/Get_Tray_Loading" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Delivery_Status">
+      <http:operation location="/Update_Delivery_Status" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status">
+      <http:operation location="/Get_Delivery_Status" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Delivery_Status_Ordernumber">
+      <http:operation location="/Get_Delivery_Status_Ordernumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Start_Route">
+      <http:operation location="/Set_Start_Route" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_scan_orders">
+      <http:operation location="/get_ffhp_scan_orders" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="get_ffhp_before_after_sale">
+      <http:operation location="/get_ffhp_before_after_sale" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLPRdata">
+      <http:operation location="/getLPRdata" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection">
+      <http:operation location="/Insert_Payment_Collection" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Insert_Payment_Collection_deliveryboy">
+      <http:operation location="/Insert_Payment_Collection_deliveryboy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Payment_Collection">
+      <http:operation location="/Get_Payment_Collection" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_DeliveryBoy">
+      <http:operation location="/Get_DeliveryBoy" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_User_Access">
+      <http:operation location="/Get_User_Access" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllDeliveryboy_Ordernumber">
+      <http:operation location="/getAllDeliveryboy_Ordernumber" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ffhpservice">
+    <wsdl:port name="ffhpserviceSoap" binding="tns:ffhpserviceSoap">
+      <soap:address location="http://tool.ffhp.in/ffhpservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ffhpserviceSoap12" binding="tns:ffhpserviceSoap12">
+      <soap12:address location="http://tool.ffhp.in/ffhpservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ffhpserviceHttpGet" binding="tns:ffhpserviceHttpGet">
+      <http:address location="http://tool.ffhp.in/ffhpservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ffhpserviceHttpPost" binding="tns:ffhpserviceHttpPost">
+      <http:address location="http://tool.ffhp.in/ffhpservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
